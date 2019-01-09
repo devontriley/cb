@@ -1,0 +1,18 @@
+.full-width-svg {
+    padding: 0 2.5rem;
+    margin: 6.5rem 0;
+
+    @media screen and (min-width: 1440px) {
+        margin: 11.11vw 0;
+    }
+
+    @media screen and (min-width: 1920px) {
+        margin: 21.12rem 0;
+    }
+}
+
+.full-width-svg__svg {
+    display: block;
+    margin: 0 auto;
+    max-width: 68.68vw;
+}
