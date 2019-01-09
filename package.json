@@ -43,6 +43,7 @@
     "postcss-preset-env": "^6.5.0",
     "slick-carousel": "^1.8.1",
     "style-loader": "0.20.2",
+    "sshpk": "1.16.0",
     "tingle.js": "^0.13.2",
     "webpack": "^4.28.0",
     "webpack-dev-middleware": "3.0.0",
