@@ -1,74 +1,48 @@
-/*
-1. Return youtube/vimeo player object
-2. Methods to control video options
- */
+import fitvids from './../../node_modules/fitvids/dist/fitvids.js';
 
-class videoLoader
+const videoPlayers = [];
+const firstScriptTag = document.getElementsByTagName('script')[0];
+let youtubePlayerScript = document.createElement('script');
+youtubePlayerScript.src = "https://www.youtube.com/iframe_api";
+firstScriptTag.parentNode.insertBefore(youtubePlayerScript, firstScriptTag);
+
+window.onYouTubeIframeAPIReady = function()
 {
-    constructor()
+    createVideos();
+}
+
+function createVideos()
+{
+    const video = document.querySelector('.video-embed__video-placeholder');
+    if(video)
     {
-        console.log('test');
+        videoPlayers.push(createVideoPlayer(video, video.dataset.id));
 
-        this.videoPlayer = null;
-
-        if(!window.YT) {
-            // Create and load youtube api script
-            this.loadYoutubeAPI();
-        }
-
-        return this.videoPlayer;
-    }
-
-    loadYoutubeAPI(callback)
-    {
-        // First script tag reference to insert youtube script before
-        const firstScriptTag = document.getElementsByTagName('script')[0];
-
-        // Create empty script element
-        let youtubePlayerScript = document.createElement('script');
-
-        // Add src to load youtube api
-        youtubePlayerScript.src = "https://www.youtube.com/iframe_api";
-
-        // Insert youtube script before first script on page
-        firstScriptTag.parentNode.insertBefore(youtubePlayerScript, firstScriptTag);
-
-        // Create youtube videos when script is ready
-        window.onYouTubeIframeAPIReady = this.createPlayer({
-            'ele': null,
-            'width': null,
-            'height': null,
-            'playerVars': {
-                'autoplay': 0,
-                'controls': 0,
-                'modestbranding': 0,
-                'rel': 0
-            }
-        });
-    }
-
-    createPlayer(playerInfo)
-    {
-        return new YT.Player(playerInfo.ele, {
-            height: playerInfo.height,
-            width: playerInfo.width,
-            videoId: playerInfo.videoId,
-            playerVars: playerInfo.playerVars
-        });
+        fitvids();
     }
 }
 
-const videos = document.querySelectorAll('.video-embed__video');
-if(videos)
+function createVideoPlayer(videoContainer, videoID)
 {
-    const videosArr = [];
-
-    for(var i = 0; i < videos.length; i++)
-    {
-        videosArr.push(new videoLoader());
+    const props = {
+        'ele': videoContainer,
+        'videoID': videoID,
+        'width': 560,
+        'height': 315,
+        'playerVars': {
+            'autoplay': 0,
+            'controls': 0,
+            'modestbranding': 0,
+            'rel': 0
+        }
     }
 
-    console.log(videosArr);
+    return new YT.Player(props.ele, {
+        height: props.height,
+        width: props.width,
+        videoId: props.videoID,
+        playerVars: props.playerVars
+    });
 }
 
 // Vimeo

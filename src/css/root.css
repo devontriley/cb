@@ -3,6 +3,7 @@
 /* Vendors first */
 @import './../../node_modules/tingle.js/dist/tingle.css'; /* Should this be loaded from webpack.config? */
 
+@import "mixins.css";
 @import "global.css";
 @import 'modal.css';
 @import "main-header.css";
@@ -20,3 +21,5 @@
 @import "work-grid.css";
 @import "image-grid.css";
 @import "tab-system.css";
+@import "video-embed.css";
+@import "soundcloud-embed.css";

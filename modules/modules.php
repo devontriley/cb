@@ -51,6 +51,14 @@ if(have_rows('modules')) :
             case 'tab_system':
                 include('tab-system.php');
                 break;
+
+            case 'video_embed':
+                include('video-embed.php');
+                break;
+
+            case 'soundcloud_embed':
+                include('soundcloud-embed.php');
+                break;
         }
     endwhile;
 endif;

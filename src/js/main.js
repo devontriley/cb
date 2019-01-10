@@ -14,6 +14,7 @@ import './image-four-callouts.js';
 import './text-grid.js';
 import './quote-slider.js';
 import './tab-system.js';
+import './video-loader.js';
 
 Barba.Pjax.start();
 

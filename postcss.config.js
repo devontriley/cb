@@ -1,6 +1,7 @@
 module.exports = {
     plugins: {
         'postcss-import': {}, // Resolve @import statements first so cssnext can run all css in a single file
+        'postcss-mixins': {},
         'postcss-preset-env': {},
         'postcss-css-reset': {},
         'postcss-nested': {},
