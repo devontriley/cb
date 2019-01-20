@@ -13,8 +13,9 @@ html {
 
 body {
     font-size: 1.4rem;
-    font-family: 'Bariol', Helvetica, Arial, sans-serif;
+    @mixin fontBariol;
     color: var(--color-blue);
+    background: var(--color-blue);
     padding-top: 13.4rem; /*Matches height of fixed header on desktop */
 
     @media screen and (min-width: 768px) {
@@ -22,12 +23,28 @@ body {
     }
 }
 
+body.home {
+    padding-top: 0;
+}
+
 body.is-mobile {
     padding-top: 7.8rem; /* Matches height of fixed header on mobile */
 }
 
+body.mobile-nav-active {
+    overflow-y: hidden;
+}
+
+.modules-wrapper {
+    background: #fff;
+}
+
+body.home .modules-wrapper {
+    background: var(--color-blue);
+}
+
 h1 {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    @mixin fontOpenSans;
     font-weight: 800;
     font-size: 1rem;
     text-transform: uppercase;

@@ -1,3 +1,5 @@
+<!-- Not home -->
+<?php if(!is_page(8)) { ?>
 <footer class="main-footer">
     <div class="main-footer__inner">
         <div class="main-footer__image-copy">
@@ -36,7 +38,7 @@
                         (555) 555-5555
                     </p>
                 </div>
-                <a href="#" class="btn">
+                <a href="work-with-us" class="btn">
                     Work With Us
                 </a>
             </div>
@@ -49,9 +51,9 @@
         <div class="main-footer__base">
             <div class="main-footer__links">
                 <ul class="main-footer__footer-links">
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Legal</a></li>
-                    <li><a href="#">Careers</a></li>
+                    <li><a href="privacy-policy">Privacy Policy</a></li>
+                    <li><a href="legal">Legal</a></li>
+                    <li><a href="careers">Careers</a></li>
                 </ul>
                 <ul class="main-footer__sm">
                     <li>
@@ -83,3 +85,19 @@
         </div>
     </div>
 </footer>
+<?php } else { ?>
+
+    <footer class="home-footer">
+        <img src="<?php echo bloginfo('template_directory') ?>/compiled/assets/images/home/SVG/Home_Careers.svg" class="home-footer__hiring-svg" />
+
+        <div class="home-footer__scroll">
+            <p>Scroll to Explore</p>
+            <img src="<?php echo bloginfo('template_directory') ?>/compiled/assets/images/home/SVG/Scroll_icon.svg" class="home-footer__scroll-svg" />
+        </div>
+
+        <div class="home-footer__live-chat">
+            LIVE CHAT
+        </div>
+    </footer>
+
+<?php } ?>

@@ -1,28 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="77px" height="77px" viewBox="0 0 77 77" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
-    <title>Group 4</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <circle id="path-1" cx="20" cy="20.0125971" r="20"></circle>
-        <filter x="-70.0%" y="-65.0%" width="255.0%" height="255.0%" filterUnits="objectBoundingBox" id="filter-2">
-            <feOffset dx="3" dy="5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-            <feGaussianBlur stdDeviation="9.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.213032156 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
-        </filter>
-    </defs>
-    <g id="Mobile-UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Leader-Page-Mobile" transform="translate(-12.000000, -80.000000)">
-            <g id="Group-4" transform="translate(27.417969, 93.593750)">
-                <g id="Group-3">
-                    <g id="Oval-10">
-                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
-                        <use fill="#EF3340" fill-rule="evenodd" xlink:href="#path-1"></use>
-                    </g>
-                    <path d="M11.6500683,19.1768448 L28.0525383,19.1768448 C28.7069905,19.1768448 29.2375289,19.7073831 29.2375289,20.3618354 L29.2375289,20.3618354 C29.2375289,21.0162876 28.7069905,21.546826 28.0525383,21.546826 L11.6500683,21.546826 C10.995616,21.546826 10.4650777,21.0162876 10.4650777,20.3618354 L10.4650777,20.3618354 C10.4650777,19.7073831 10.995616,19.1768448 11.6500683,19.1768448 Z" id="Rectangle-4" fill="#FFFFFF" transform="translate(19.851303, 20.361835) rotate(-45.000000) translate(-19.851303, -20.361835) "></path>
-                    <path d="M11.6500683,19.1768448 L28.0525383,19.1768448 C28.7069905,19.1768448 29.2375289,19.7073831 29.2375289,20.3618354 L29.2375289,20.3618354 C29.2375289,21.0162876 28.7069905,21.546826 28.0525383,21.546826 L11.6500683,21.546826 C10.995616,21.546826 10.4650777,21.0162876 10.4650777,20.3618354 L10.4650777,20.3618354 C10.4650777,19.7073831 10.995616,19.1768448 11.6500683,19.1768448 Z" id="Rectangle-4-Copy-3" fill="#FFFFFF" transform="translate(19.851303, 20.361835) scale(-1, 1) rotate(-45.000000) translate(-19.851303, -20.361835) "></path>
-                </g>
-            </g>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Modal_Close" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#EF3340;}
+</style>
+<path class="st0" d="M20.1,0C9,0,0,8.9,0,19.9C0,31,8.9,40,19.9,40c11,0,20-8.9,20.1-19.9C40,9,31.1,0,20.1,0z M26.5,25.3
+	c0.5,0.5,0.5,1.2,0,1.7c-0.5,0.5-1.2,0.5-1.7,0l-4.9-5l-5,4.9c-0.5,0.5-1.2,0.5-1.7,0s-0.5-1.2,0-1.7l5-4.9l-4.9-5
+	c-0.5-0.5-0.5-1.2,0-1.7s1.2-0.5,1.7,0l4.9,5l5-4.9c0.5-0.5,1.2-0.5,1.7,0s0.5,1.2,0,1.7l-5,4.9L26.5,25.3z"/>
 </svg>

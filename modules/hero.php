@@ -2,6 +2,18 @@
 $header = get_sub_field('header');
 $copy = get_sub_field('copy');
 $includeWorkFilter = get_sub_field('include_work_filter');
+if($includeWorkFilter) {
+    $workTerms = get_terms('work_categories');
+}
+$includeCareers = get_sub_field('include_careers');
+if($includeCareers) {
+    $careers = new WP_Query([
+        'post_type' => 'career',
+        'posts_per_page' => -1,
+        'orderby' => 'menu_order',
+        'order' => 'ASC'
+    ]);
+}
 $subheader = get_sub_field('subheader');
 $subheader_copy = get_sub_field('subheader_copy');
 $large_page_title = get_sub_field('large_page_title');
@@ -22,17 +34,34 @@ $large_page_title = get_sub_field('large_page_title');
         </div>
         <?php } ?>
 
+        <?php if($includeCareers) { ?>
+            <div class="module-hero__subheader careers">
+                <h3>Current openings.</h3>
+                <ul>
+                <?php foreach($careers->posts as $career) { ?>
+                    <li><a href="<?php echo get_permalink($career->ID) ?>"><?php echo $career->post_title ?> ></a></li>
+                <?php } ?>
+                </ul>
+                <p>Don't see the opening you're looking for? <a href="contact-us">Contact us!</a></p>
+            </div>
+        <?php } ?>
+
         <?php if($includeWorkFilter) { ?>
             <div class="module-hero__work-filter">
                 <label>Filter Work By:</label>
                 <select>
-                    <option selected>All</option>
+                    <option value="" selected>All</option>
+                    <?php foreach($workTerms as $t) { ?>
+                        <option value="<?php echo $t->term_id ?>"><?php echo $t->name; ?></option>
+                    <?php } ?>
                 </select>
             </div>
         <?php } ?>
 
+        <?php if($subheader || $subheader_copy) { ?>
         <svg viewBox="0 0 317 469" class="module-hero__thumbprint">
             <use xlink:href="#thumbprint-icon"></use>
         </svg>
+        <?php } ?>
     </div>
 </div>

@@ -45,7 +45,49 @@
     }
 }
 
+.module-hero__subheader ul {
+    font-weight: 700;
+    text-transform: uppercase;
+    @mixin fontOpenSans;
+    font-size: 1.4rem;
+    margin-bottom: 1em;
+
+    @media screen and (min-width: 768px) {
+        font-size: 1.25vw;
+        columns: 2;
+        column-gap: 3rem;
+    }
+
+    @media screen and (min-width: 1920px) {
+        font-size: 2.4rem;
+    }
+}
+
+.module-hero__subheader ul li {
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+}
+
+.module-hero__subheader p {
+    @mixin fontOpenSans;
+    font-size: 1.4rem;
+    line-height: 1.5em;
+
+    @media screen and (min-width: 768px) {
+        font-size: 1.25vw;
+    }
+
+    @media screen and (min-width: 1920px) {
+        font-size: 2.4rem;
+    }
+}
+
+.module-hero__subheader p a {
+    color: var(--color-red);
+}
+
 .module-hero__large-page-title {
+    @mixin fontOpenSans;
     color: #002a47;
     font-size: 10rem;
     font-weight: 700;

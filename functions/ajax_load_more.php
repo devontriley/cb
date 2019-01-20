@@ -1,67 +1,53 @@
 <?php
-add_action('wp_ajax_nopriv_load_more_news_posts', 'load_more_news_posts');
-add_action('wp_ajax_load_more_news_posts', 'load_more_news_posts');
+add_action('wp_ajax_nopriv_wp_query', 'wp_query');
+add_action('wp_ajax_wp_query', 'wp_query');
 
-function load_more_news_posts(){
-
-    // This is how we can retrieve POST variables from ajax
+function wp_query()
+{
     $data = json_decode(file_get_contents('php://input'));
+    $action = $data->action;
+    $payload = $data->payload;
 
-    $perPage = 4;
-    $currentPage = $data->currentPage;
-    $currentOffset = 8 + ($currentPage * $perPage);
-
+    // Have to recreate args array, tax_query wasn't working because of the nested array which doesn't seem to work by sending array with object inside
     $args = array(
-        'post_type' => array('event', 'news'),
-        'posts_per_page' => $perPage,
-        'offset' => $currentOffset,
-        'post_status' => 'publish',
-        'orderby' => 'date',
-        'order' => 'DESC'
+        'post_type' => $payload->post_type,
+        'orderby' => $payload->orderby,
+        'order' => $payload->order
     );
 
-    $ajax_query = new WP_Query( $args );
+    if($payload->tax_query[0]->terms)
+    {
+        $args['tax_query'] = array(
+            array(
+                'taxonomy' => $payload->tax_query[0]->taxonomy,
+                'field' => $payload->tax_query[0]->field,
+                'terms' => $payload->tax_query[0]->terms
+            )
+        );
+    }
 
-    if( $ajax_query->have_posts() ):
+    $query = new WP_Query($args);
 
-        $output;
+    $posts = $query->posts;
 
-        while( $ajax_query->have_posts() ): $ajax_query->the_post();
+    // Add additional data for specific requests
+    if($payload->post_type == 'work')
+    {
+        foreach($posts as $p)
+        {
+            $image = $p->thumbnail;
+            $imageID = wp_get_attachment_image_src($image, 'full');
+            $terms = wp_get_post_terms($p->ID, 'work_categories');
 
-            $title = get_the_title();
-            $date = get_the_date('d/m/y');
-            $blurb = get_field('grid_description');
-            $buttonUrl = get_permalink();
-            $buttonLabel = 'Read More';
+            $p->client_name = $p->client_name;
+            $p->thumbnail = $imageID[0];
+            $p->permalink = get_permalink($p);
+            $p->terms = $terms;
+        }
+    }
 
-            $output .= '<div class="post-container">';
-            $output .= '<a class="post-link" href="'. $buttonUrl .'"></a>';
-            $output .= '<div class="inner">';
-            $output .= '<p class="title">'. $title .'</p>';
-            $output .= '<p class="date">'. $date .'</p>';
-            $output .= '<div class="blurb">'. $blurb .'</div>';
+    echo json_encode($posts);
 
-            $output .=     '<div class="btn-wrapper">';
-            $output .=    '<a class="btn" href="'. $buttonUrl .'"><span>'. $buttonLabel .'</span>';
-            $output .=    '<svg viewbox="0 0 10 16"><use xlink:href="#button-arrow"></use></svg>';
-            $output .=    '</a><!-- .btn -->';
-            $output .=    '</div><!-- .btn-wrapper -->';
-
-            $output .= '</div> <!-- .inner -->';
-            $output .= '</div> <!-- .post-container -->';
-
-        endwhile;
-
-        wp_reset_postdata();
-    endif;
-
-    $dataOutput = array(
-        'offset' => $ajax_query->post_count,
-        'html' => $output
-    );
-
-    echo json_encode($dataOutput);
-
-    exit;
+    wp_die();
 }
 ?>

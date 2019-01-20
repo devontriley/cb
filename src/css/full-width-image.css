@@ -1,6 +1,10 @@
-.full-width-svg {
+.full-width-image {
     padding: 0 2.5rem;
     margin: 6.5rem 0;
+
+    @media screen and (min-width: 768px) {
+        padding: 0;
+    }
 
     @media screen and (min-width: 1440px) {
         margin: 11.11vw 0;
@@ -11,8 +15,10 @@
     }
 }
 
-.full-width-svg__svg {
+.full-width-image__image {
     display: block;
     margin: 0 auto;
-    max-width: 68.68vw;
+    width: 100%;
+    max-width: 100%;
+    vertical-align: bottom;
 }

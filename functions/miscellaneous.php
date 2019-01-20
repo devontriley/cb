@@ -1,15 +1,15 @@
 <?php
 // Use single template for multiple custom post types
-add_filter('template_include', function($template) {
-    $types = array('career', 'event', 'news');
-    $templateName = 'templatename.php';
-
-    if (is_singular($types)){
-        return get_stylesheet_directory() . '/' . $templateName;
-    } else {
-        return $template;
-    }
-});
+//add_filter('template_include', function($template) {
+//    $types = array('career', 'event', 'news');
+//    $templateName = 'single.php';
+//
+//    if (is_singular($types)){
+//        return get_stylesheet_directory() . '/' . $templateName;
+//    } else {
+//        return $template;
+//    }
+//});
 
 // Remove <img> size attributes from embedded images
 add_filter( 'image_send_to_editor', 'remove_image_size_attributes' );

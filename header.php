@@ -22,9 +22,9 @@ window.mobileDetected = window.mobilecheck();
 
 <body <?php body_class(); ?>>
 
-<div id="barba-wrapper">
-
-<div class="barba-container tingle-content-wrapper">
+<!--<div id="barba-wrapper">-->
+<!---->
+<!--<div class="barba-container tingle-content-wrapper">-->
 
     <script type="text/javascript">
         if(mobileDetected) document.body.classList.add('is-mobile');
@@ -33,5 +33,7 @@ window.mobileDetected = window.mobilecheck();
 <?php include('template-parts/master-svg.svg'); ?>
 
 <?php include('template-parts/main-header.php'); ?>
+
+<div class="modules-wrapper">
 
 

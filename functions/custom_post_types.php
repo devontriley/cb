@@ -60,6 +60,35 @@ function cpt_projects_init() {
             'supports' => array(
                 'title'
             )
+        ),
+        "career" => array(
+            'labels' => array(
+                'name' => 'Careers',
+                'singular_name' => 'Career',
+                'add_new' => 'Add New Career',
+                'add_new_item' => 'Add New Career',
+                'edit_item' => 'Edit Career',
+                'new_item' => 'New Career',
+                'all_items' => 'All Careers',
+                'view_item' => 'View Career',
+                'search_items' => 'Search Careers',
+                'not_found' =>  'No Careers Found',
+                'not_found_in_trash' => 'No Careers found in Trash',
+                'parent_item_colon' => '',
+                'menu_name' => 'Careers',
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'show_ui' => true,
+            'capability_type' => 'post',
+            'hierarchical' => false,
+            'rewrite' => array('slug' => 'career'),
+            'query_var' => true,
+            'menu_icon' => 'dashicons-media-text',
+            'hierarchical' => true,
+            'supports' => array(
+                'title'
+            )
         )
     );
 
@@ -67,17 +96,15 @@ function cpt_projects_init() {
         register_post_type($k, $v);
     }
 
-
-
-//    register_taxonomy(
-//        'event_category',
-//        'event',
-//        array(
-//            'hierarchical' => true,
-//            'label' => 'Event',
-//            'query_var' => true,
-//            'rewrite' => array( 'slug' => 'event-category' )
-//        )
-//    );
+    register_taxonomy(
+        'work_categories',
+        'work',
+        array(
+            'hierarchical' => true,
+            'label' => 'Work Categories',
+            'query_var' => true,
+            'rewrite' => array( 'slug' => 'work-category' )
+        )
+    );
 }
 ?>

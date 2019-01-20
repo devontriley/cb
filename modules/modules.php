@@ -16,8 +16,8 @@ if(have_rows('modules')) :
                 include('image-with-callouts.php');
                 break;
 
-            case 'full_width_svg':
-                include('full-width-svg.php');
+            case 'full_width_image':
+                include('full-width-image.php');
                 break;
 
             case 'team_profiles':
@@ -58,6 +58,30 @@ if(have_rows('modules')) :
 
             case 'soundcloud_embed':
                 include('soundcloud-embed.php');
+                break;
+
+            case 'form':
+                include('form.php');
+                break;
+
+            case 'locations':
+                include('locations.php');
+                break;
+
+            case 'image_carousel':
+                include('image-carousel.php');
+                break;
+
+            case 'browser_display':
+                include('browser-display.php');
+                break;
+
+            case 'mobile_displays':
+                include('mobile-displays.php');
+                break;
+
+            case 'stats':
+                include('stats.php');
                 break;
         }
     endwhile;

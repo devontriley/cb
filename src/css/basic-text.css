@@ -2,20 +2,47 @@
     padding: 0 3rem 0 7rem;
     margin: 6.5rem 0;
 
-    /*@media screen and (min-width: 768px) {*/
-        /*padding: 6.5rem 28.4rem;*/
-    /*}*/
-
     @media screen and (min-width: 768px) {
-        /*padding: 4.992vw 21.8112vw;*/
         padding: 0 0 0 20%;
         margin: 4.51388vw 0;
     }
 
     @media screen and (min-width: 1920px) {
-        /* padding: 9.58464rem 41.8775rem; */
         margin: 9.58464rem 0;
     }
+}
+
+.basic-text.align-left {
+    @media screen and (min-width: 768px) {
+        padding: 0 7.98vw;
+        margin-right: 27.4vw;
+    }
+
+    @media screen and (min-width: 1920px) {
+        padding: 0 15.3rem;
+        margin-right: 52.6rem;
+    }
+}
+
+.basic-text.align-right {
+    @media screen and (min-width: 768px) {
+        padding: 0 7.98vw;
+        margin-left: 27.4vw;
+    }
+
+    @media screen and (min-width: 1920px) {
+        padding: 0 15.3rem;
+        margin-left: 52.6rem;
+    }
+}
+
+.basic-text.blue-background {
+    color: #fff;
+    background: var(--color-blue);
+}
+
+.basic-text.grey-background {
+    background: var(--color-lightest-grey);
 }
 
 .basic-text__inner {
@@ -27,6 +54,21 @@
 
     @media screen and (min-width: 1920px) {
         max-width: 115.2rem;
+    }
+}
+
+.basic-text.grey-background .basic-text__inner {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    @media screen and (min-width: 768px) {
+        padding-top: 6.94vw;
+        padding-bottom: 6.94vw;
+    }
+
+    @media screen and (min-width: 1920px) {
+        padding-top: 13.33rem;
+        padding-bottom: 13.33rem;
     }
 }
 

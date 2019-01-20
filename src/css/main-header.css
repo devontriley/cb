@@ -33,6 +33,47 @@
     fill: var(--color-red);
 }
 
+.main-header__hamburger {
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
 .main-header__hamburger svg {
     fill: var(--color-red);
+}
+
+.main-header__main-nav {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: block;
+    }
+}
+
+.main-header__main-nav ul {
+    font-size: 0;
+}
+
+.main-header__main-nav li {
+    @mixin fontOpenSans;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 3rem;
+}
+
+.main-header__main-nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.main-header--scroll-up .main-header__main-nav a {
+    color: var(--color-blue);
+}
+
+.main-header__main-nav li.button a {
+    background: red;
 }

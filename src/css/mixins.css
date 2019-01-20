@@ -12,3 +12,11 @@
         font-size: 2.4rem;
     }
 }
+
+@define-mixin fontBariol {
+    font-family: 'Bariol', Helvetica, Arial, sans-serif;
+}
+
+@define-mixin fontOpenSans {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}

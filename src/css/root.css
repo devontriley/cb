@@ -5,15 +5,18 @@
 
 @import "mixins.css";
 @import "global.css";
+@import "home-animation.css";
 @import 'modal.css';
 @import "main-header.css";
 @import "main-footer.css";
-@import 'main-nav.css';
+@import 'home-footer.css';
+@import 'mobile-nav.css';
 @import "hero.css";
 @import "basic-text.css";
 @import "image-with-callouts.css";
-@import "full-width-svg.css";
+@import "full-width-image.css";
 @import "team-profiles.css";
+@import "team-profiles-modal.css";
 @import "image-four-callouts.css";
 @import "50-50.css";
 @import "text-grid.css";
@@ -23,3 +26,8 @@
 @import "tab-system.css";
 @import "video-embed.css";
 @import "soundcloud-embed.css";
+@import "form.css";
+@import "locations.css";
+@import "image-carousel.css";
+@import "browser-display.css";
+@import "mobile-displays.css";
