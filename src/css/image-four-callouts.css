@@ -53,6 +53,7 @@
   margin: 0 auto;
   position: relative;
   top: -3.5rem;
+  margin-bottom: -3.5rem;
 
   @media screen and (min-width: 768px) {
     display: flex;
@@ -71,6 +72,9 @@
 }
 
 .image-four-callouts__callouts li {
+  position: relative;
+  transition: all ease 200ms;
+
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: nowrap;
@@ -90,11 +94,44 @@
   }
 }
 
+.image-four-callouts__callouts li:before {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-lightest-grey);
+    transition: all ease 200ms;
+  }
+}
+
+.image-four-callouts__callouts li:hover:before {
+  background: var(--color-red);
+  transform: scale(1.05);
+  box-shadow: 4px 6px 9px 0 rgba(0,0,0,0.17);
+}
+
+.image-four-callouts__callouts li:hover {
+  color: #fff;
+  z-index: 1;
+}
+
 .image-four-callouts__callouts li:nth-child(4n+2),
 .image-four-callouts__callouts li:nth-child(4n+3){
   @media screen and (min-width: 768px) {
     background: var(--color-light-grey);
   }
+}
+
+.image-four-callouts__callouts li div {
+  position: relative;
+  z-index: 5;
 }
 
 .image-four-callouts__callouts .slick-list {

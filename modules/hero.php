@@ -17,6 +17,12 @@ if($includeCareers) {
 $subheader = get_sub_field('subheader');
 $subheader_copy = get_sub_field('subheader_copy');
 $large_page_title = get_sub_field('large_page_title');
+$imageID = get_sub_field('image');
+if($imageID) {
+    $image = wp_get_attachment_image_src($imageID, 'full');
+    $imageAlt = get_post_meta($imageID, '_wp_attachment_image_alt', true);
+}
+$video = get_sub_field('video');
 ?>
 
 <div class="module-hero <?php if($includeWorkFilter) echo 'include-work-filter'; ?>">
@@ -64,4 +70,12 @@ $large_page_title = get_sub_field('large_page_title');
         </svg>
         <?php } ?>
     </div>
+
+    <?php if($image) { ?>
+        <img src="<?php echo $image[0] ?>" alt="<?php echo $imageAlt ?>" class="module-hero__image" />
+    <?php } ?>
+
+    <?php if($video) { ?>
+        NEED TO LOAD HTML5 VIDEO HERE
+    <?php } ?>
 </div>

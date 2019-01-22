@@ -14,7 +14,7 @@ $images = get_sub_field('images');
                     $imageID = $i['image'];
                     $image = wp_get_attachment_image_src($imageID, 'full'); ?>
                     <div class="mobile-displays__image">
-                        <img src="<?php echo $image[0] ?>" />
+                        <img src="<?php echo bloginfo('template_directory'); ?>/compiled/assets/images/case_studies/Desktop/Project_Mobile_Display.svg" role="presentation" />
                     </div>
                 <?php }
             } ?>

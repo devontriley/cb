@@ -3,12 +3,12 @@
   padding: 0 2.5rem;
 
   @media screen and (min-width: 768px) {
-    margin: 4.51388vw 0;
+    margin: calc(8rem + 120 * ((100vw - 768px) / 1152)) 0;
     padding: 0;
   }
 
   @media screen and (min-width: 1920px) {
-    margin: 9.58464rem 0;
+    margin: 20rem 0;
   }
 }
 
@@ -44,12 +44,29 @@
 }
 
 .module-50-50__copy h2 {
-  margin: 0 0 5vw 0;
+  margin: 0 0 4rem 0;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: calc(4rem + 53 * ((100vw - 768px) / 1152));
+  }
+
+  @media screen and (min-width: 1920px) {
+    margin-bottom: 9.3rem;
+  }
 }
 
 .module-50-50__copy p {
   margin: 0 0 2em 0;
   line-height: 1.5em;
+  font-size: 1.4rem;
+
+  @media screen and (min-width: 768px) {
+    font-size: calc(1.4rem + 10 * ((100vw - 768px) / 1152));
+  }
+
+  @media screen and (min-width: 1920px) {
+    font-size: 2.4rem;
+  }
 }
 
 .module-50-50__image {

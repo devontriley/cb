@@ -30,7 +30,7 @@ window.mobileDetected = window.mobilecheck();
         if(mobileDetected) document.body.classList.add('is-mobile');
     </script>
 
-<?php include('template-parts/master-svg.svg'); ?>
+<?php include('template-parts/master-svg.php'); ?>
 
 <?php include('template-parts/main-header.php'); ?>
 

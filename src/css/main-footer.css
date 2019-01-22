@@ -54,6 +54,10 @@
   }
 }
 
+.main-footer__copy .btn {
+  @mixin button #fff var(--color-red) var(--color-red);
+}
+
 .main-footer__image {
   @media screen and (min-width: 768px) {
     height: 40vw;
@@ -142,6 +146,14 @@
 
   @media screen and (min-width: 768px) {
     font-size: .972vw;
+  }
+}
+
+.main-footer__addresses .btn {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    @mixin button #fff var(--color-red) var(--color-red);
   }
 }
 

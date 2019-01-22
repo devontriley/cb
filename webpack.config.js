@@ -47,7 +47,7 @@ module.exports = {
         ]
     },
 
-    mode: 'development',
+    mode: ENV,
 
     devtool: ENV === "production" ? false : "inline-source-map",
 
