@@ -90,7 +90,7 @@
 .image-callouts__callout1 p {
     font-size: 1.4rem;
     font-weight: 700;
-    line-height: 1.5em;
+    line-height: 1.3em;
     margin-bottom: 1em;
 
     @media screen and (min-width: 768px) {

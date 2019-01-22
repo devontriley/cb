@@ -3,7 +3,10 @@ import { getElementIndex } from './utils.js';
 const teamSlider = document.querySelector('.team-profiles__slider');
 const teamModal = document.querySelector('.team-profiles__modal');
 const teamModalMembers = document.querySelectorAll('.team-profiles__modal-member');
-let teamModalActiveMember = null;
+let teamModalActiveMember = {
+    ele: null,
+    index: 0
+}
 const teamSliderNav = document.querySelector('.team-profiles__slider-nav');
 let teamSliderHandle = document.querySelector('.team-profiles__slider-handle');
 let teamSliderHandleW = 0;
@@ -36,7 +39,8 @@ if(teamSlider)
         let slide = e.target.closest('.slick-slide');
         if(!slide) return;
         let index = getElementIndex(slide);
-        const member = teamModalActiveMember = teamModalMembers[index];
+        const member = teamModalActiveMember.ele = teamModalMembers[index];
+        teamModalActiveMember.index = index;
 
         document.body.classList.add('modal-active');
         teamModal.style.display = 'block';
@@ -53,7 +57,7 @@ if(teamSlider)
         }
 
         // Next Modal
-        if(e.target.classList.contains('team-profiles__modal-next')) {
+        if(e.target.classList.contains('team-profiles__modal-next') || e.target.closest('.team-profiles__modal-next')) {
             nextTeamModal();
         }
     });
@@ -62,6 +66,8 @@ if(teamSlider)
     document.body.addEventListener('mousedown', function(e)
     {
         e.stopPropagation();
+
+        if(!teamModalActiveMember.ele) return;
 
         // Close Modal
         if(!e.target.closest('.team-profiles__modal')) {
@@ -72,12 +78,18 @@ if(teamSlider)
 
 function nextTeamModal()
 {
-    teamModalActiveMember.classList.remove('active');
+    const newIndex = teamModalActiveMember.index == teamModalMembers.length - 1 ? 0 : teamModalActiveMember.index + 1;
+    teamModalActiveMember.ele.classList.remove('active');
+    teamModalActiveMember.ele = teamModalMembers[newIndex];
+    teamModalActiveMember.ele.classList.add('active');
+    teamModalActiveMember.index = newIndex;
+
 }
 
 function closeTeamModal()
 {
     document.body.classList.remove('modal-active');
     teamModal.style.display = 'none';
-    teamModalActiveMember.classList.remove('active');
+    teamModalActiveMember.ele.classList.remove('active');
+    teamModalActiveMember.ele = null;
 }

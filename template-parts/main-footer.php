@@ -10,7 +10,12 @@
                     Market-moving.<br>
                     Unique.
                 </p>
-                <a href="#" class="btn">Our Work.</a>
+                <a href="#" class="btn">
+                    Our Work.
+                    <svg class="arrow arrow-left" viewBox="0 0 33 21" width="33px" height="21px">
+                        <use xlink:href="#left-arrow"></use>
+                    </svg>
+                </a>
             </div>
             <div class="main-footer__image">
                 <picture>
@@ -40,6 +45,9 @@
                 </div>
                 <a href="work-with-us" class="btn">
                     Work With Us
+                    <svg class="arrow arrow-left" viewBox="0 0 33 21" width="33px" height="21px">
+                        <use xlink:href="#left-arrow"></use>
+                    </svg>
                 </a>
             </div>
             <div class="main-footer__logo">

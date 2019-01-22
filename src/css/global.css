@@ -54,7 +54,11 @@ h1 {
     margin: 0 0 1em 0;
 
     @media screen and (min-width: 768px) {
-        font-size: 1.2rem;
+        font-size: calc(1.2rem + 6 * ((100vw - 768px) / 1152));
+    }
+
+    @media screen and (min-width: 1920px) {
+        font-size: 1.8rem;
     }
 }
 
@@ -88,6 +92,10 @@ h3 {
     @media screen and (min-width: 1920px) {
         font-size: 4.224rem;
     }
+}
+
+.btn {
+    @mixin button;
 }
 
 .cover-link {

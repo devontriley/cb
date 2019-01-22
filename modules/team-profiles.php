@@ -55,7 +55,7 @@ $teamMembers = new WP_Query([
                 ?>
                 <div class="team-profiles__modal-member">
                     <div class="team-profiles__modal-image">
-                        <img src="<?php echo $headshot[0] ?>" alt="<?php echo name ?>" />
+                        <img src="<?php echo $headshot[0] ?>" alt="<?php echo $name ?>" />
                     </div>
                     <div class="team-profiles__modal-bio">
                         <a href="#" class="team-profiles__modal-close">
@@ -72,7 +72,12 @@ $teamMembers = new WP_Query([
                                 Maureen led major rare disease brands at Genzyme; at CB, she has led the agency and its clients to unprecedented growth through her unique insights, experience, and humor. Maureen led major rare disease brands at Genzyme; at CB, she has led the agency and its clients to unprecedented growth through her unique insights, experience, and humor.
                             </p>
                         </div>
-                        <a href="#" class="team-profiles__modal-next">Next --></a>
+                        <a href="#" class="team-profiles__modal-next btn">
+                            Next
+                            <svg class="arrow arrow-left" viewBox="0 0 33 21" width="33px" height="21px">
+                                <use xlink:href="#left-arrow"></use>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             <?php }

@@ -180,5 +180,21 @@
         </g>
     </symbol>
 
+    <!-- ARROW LEFT -->
+    <symbol id="left-arrow" viewBox="0 0 33 21">
+        <g stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+            <g transform="translate(-160.000000, -11629.000000)">
+                <g transform="translate(161.000000, 11623.000000)">
+                    <g id="Group-7" transform="translate(16.000000, 16.390625) rotate(-180.000000) translate(-16.000000, -16.390625) translate(0.000000, 5.890625)">
+                        <g transform="translate(0.000000, 0.500000)">
+                            <path d="M0.90625,10 L30.7825815,10"></path>
+                            <polyline stroke-linejoin="round" transform="translate(21.899356, 9.899356) rotate(-45.000000) translate(-21.899356, -9.899356) " points="28.8991589 2.89935574 28.8991589 16.8993557 14.8995526 16.8993557"></polyline>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </symbol>
+
 </svg>
 </div>

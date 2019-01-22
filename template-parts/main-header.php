@@ -1,37 +1,4 @@
-<!-- Not Home -->
-<?php //if(!is_page(8)) { ?>
-
 <?php $mainNav = wp_get_nav_menu_items('main-nav'); ?>
-
-<header class="main-header">
-    <div class="main-header__logo">
-        <svg viewBox="0 0 198 38">
-            <use xlink:href="#cb-logo"></use>
-        </svg>
-    </div>
-
-    <a href="#0" class="main-header__hamburger" role="button">
-        <svg viewBox="0 0 23 14" width="23">
-            <use xlink:href="#hamburger-icon"></use>
-        </svg>
-    </a>
-
-    <div class="main-header__main-nav">
-        <ul class="main-nav__items">
-            <?php foreach($mainNav as $nav) :
-                if($nav->classes) {
-                    $classes = '';
-                    foreach ($nav->classes as $c) {
-                        $classes .= $c . ' ';
-                    }
-                } ?>
-                <li class="main-nav__item <?php echo $classes ?>">
-                    <a class="main-nav__link" href="<?php echo $nav->url ?>"><?php echo $nav->title ?></a>
-                </li>
-            <?php endforeach; ?>
-        </ul>
-    </div>
-</header>
 
 <nav class="mobile-nav">
     <div class="mobile-nav__logo">
@@ -95,4 +62,32 @@
     </div>
 </nav>
 
-<?php //} ?>
+<header class="main-header">
+    <div class="main-header__logo">
+        <svg viewBox="0 0 198 38">
+            <use xlink:href="#cb-logo"></use>
+        </svg>
+    </div>
+
+    <a href="#0" class="main-header__hamburger" role="button">
+        <svg viewBox="0 0 23 14" width="23">
+            <use xlink:href="#hamburger-icon"></use>
+        </svg>
+    </a>
+
+    <div class="main-header__main-nav">
+        <ul class="main-nav__items">
+            <?php foreach($mainNav as $nav) :
+                if($nav->classes) {
+                    $classes = '';
+                    foreach ($nav->classes as $c) {
+                        $classes .= $c . ' ';
+                    }
+                } ?>
+                <li class="main-nav__item <?php echo $classes ?>">
+                    <a class="main-nav__link" href="<?php echo $nav->url ?>"><?php echo $nav->title ?></a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+</header>

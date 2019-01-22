@@ -9,7 +9,7 @@ $imageLeft = get_sub_field('image_left');
 <div class="module-50-50 <?php if($imageLeft) { echo 'image-left'; } ?>">
     <div class="module-50-50__inner">
         <div class="module-50-50__copy">
-            <h2><?php echo $title ?></h2>
+            <?php if($title) { ?><h2><?php echo $title ?></h2><?php } ?>
             <?php echo $copy ?>
         </div>
         <div class="module-50-50__image">
