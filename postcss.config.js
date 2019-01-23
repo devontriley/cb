@@ -9,7 +9,7 @@ module.exports = {
             'variants': {
                 'Open Sans': {
                     '400': [],
-                    '800': []
+                    '700': []
                 }
             },
             'custom': {

@@ -1,10 +1,14 @@
 <?php
 $header = get_sub_field('header');
 $copy = get_sub_field('copy');
+
+/* Work Page */
 $includeWorkFilter = get_sub_field('include_work_filter');
 if($includeWorkFilter) {
     $workTerms = get_terms('work_categories');
 }
+
+/* Careers Page */
 $includeCareers = get_sub_field('include_careers');
 if($includeCareers) {
     $careers = new WP_Query([
@@ -14,6 +18,10 @@ if($includeCareers) {
         'order' => 'ASC'
     ]);
 }
+
+/* Career Apply Button */
+$applyURL = get_field('apply_url');
+
 $subheader = get_sub_field('subheader');
 $subheader_copy = get_sub_field('subheader_copy');
 $large_page_title = get_sub_field('large_page_title');
@@ -30,6 +38,14 @@ $video = get_sub_field('video');
         <div class="module-hero__header">
             <h1><?php echo $header ?></h1>
             <h2><?php echo $copy ?></h2>
+            <?php if($applyURL) { ?>
+                <a href="<?php echo $applyURL; ?>" class="btn" target="_blank">
+                    <span>Apply for this position</span>
+                    <svg class="arrow arrow-right" viewBox="0 0 32 14">
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+                </a>
+            <?php } ?>
         </div>
 
         <?php if($subheader || $subheader_copy) { ?>

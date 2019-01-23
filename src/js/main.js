@@ -18,6 +18,7 @@ import './quote-slider.js';
 import './tab-system.js';
 import './video-loader.js';
 import './image-carousel.js';
+import './mobile-displays.js';
 
 // Barba.Pjax.start();
 //

@@ -12,6 +12,7 @@ body.modal-active {
         background: #fff;
     }
 }
+
 .team-profiles__modal {
     display: none;
     position: fixed;
@@ -23,13 +24,16 @@ body.modal-active {
     width: 100%;
     height: 100%;
     background: #fff;
-    max-width: 144rem;
-    max-height: 83rem;
     padding: 0;
     box-sizing: border-box;
 
     @media screen and (min-width: 768px) {
-        padding: 2.5rem;
+        width: 100vw;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        transform: none;
+        overflow: hidden;
     }
 }
 
@@ -165,4 +169,5 @@ body.modal-active {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    vertical-align: bottom;
 }

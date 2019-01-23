@@ -20,14 +20,25 @@
 }
 
 .module-hero__header {
-  padding: 0 0 0 4rem;
-  position: relative;
-  z-index: 1;
+    padding: 0 0 0 4rem;
+    position: relative;
+    z-index: 1;
 
-  @media screen and (min-width: 768px) {
-      max-width: 54vw;
-      padding: 0 0 0 11.7rem;
-  }
+    @media screen and (min-width: 768px) {
+        max-width: 54vw;
+        padding: 0 0 0 11.7rem;
+    }
+
+    .btn {
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            @mixin button #fff, var(--color-red), var(--color-red);
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
 }
 
 .module-hero__subheader {
@@ -84,16 +95,15 @@
 }
 
 .module-hero__subheader p {
-  @mixin fontOpenSans;
   font-size: 1.4rem;
   line-height: 1.5em;
 
   @media screen and (min-width: 768px) {
-      font-size: 1.25vw;
+      font-size: calc(1.6rem + 16 * ((100vw - 768px) / 1152));
   }
 
   @media screen and (min-width: 1920px) {
-      font-size: 2.4rem;
+      font-size: 3.2rem;
   }
 }
 
@@ -110,7 +120,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  transform: translateY(-100%);
+  transform: translateY(calc(-100% + 1.3vw));
 
   @media screen and (min-width: 768px) {
       font-size: calc(10.5rem + 155 * ((100vw - 768px) / 1152));
@@ -155,7 +165,7 @@
 
 .module-hero__thumbprint {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   right: 0;
   bottom: -7rem;
   fill: var(--color-lightest-grey);

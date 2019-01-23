@@ -11,7 +11,7 @@ if(mainHeader) {
         if(direction == 'down') {
             mainHeader.classList.remove('main-header--scroll-up');
 
-            if(scrollPosition > mainHeader.offsetHeight) {
+            if(scrollPosition > 0) {
                 mainHeader.classList.add('main-header--hide');
             } else {
                 mainHeader.classList.remove('main-header--hide');
@@ -21,7 +21,7 @@ if(mainHeader) {
         if(direction == 'up') {
             mainHeader.classList.remove('main-header--hide');
 
-            if(scrollPosition > mainHeader.offsetHeight) {
+            if(scrollPosition > 0) {
                 mainHeader.classList.add('main-header--scroll-up');
             } else {
                 mainHeader.classList.remove('main-header--scroll-up');

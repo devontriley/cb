@@ -1,14 +1,16 @@
 .basic-text {
     padding: 0 3rem 0 7rem;
     margin: 6.5rem 0;
+    position: relative;
 
     @media screen and (min-width: 768px) {
         padding: 0 0 0 20%;
         margin: 4.51388vw 0;
+        margin: calc(6.5rem + 41 * ((100vw - 768px) / 1152)) 0;
     }
 
     @media screen and (min-width: 1920px) {
-        margin: 9.58464rem 0;
+        margin: 10.6rem 0;
     }
 }
 
@@ -45,10 +47,10 @@
 
 .basic-text.module-align-center .basic-text__inner {
     margin: 0 auto;
-}
 
-.basic-text.module-align-center .basic-text__column[data-columns="1"] {
-    max-width: none;
+    .basic-text__column[data-columns="1"] {
+        max-width: none;
+    }
 }
 
 .basic-text.align-text-left {
@@ -66,6 +68,26 @@
 .basic-text.blue-background {
     color: #fff;
     background: var(--color-blue);
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    .basic-text__column[data-columns="1"] {
+        max-width: none;
+    }
+
+    .btn {
+        @mixin button #fff, var(--color-red), var(--color-red);
+    }
+}
+
+.module-hero + .basic-text.blue-background {
+    margin-top: -13.5rem;
+
+    @media screen and (min-width: 768px) {
+        margin-top: -15.6238vw;
+    }
 }
 
 .basic-text.grey-background {
@@ -136,4 +158,10 @@
 .basic-text p {
     @mixin basicP;
     margin-bottom: 1.5em;
+
+    @media screen and (min-width: 768px) {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }

@@ -64,12 +64,14 @@
 
 <header class="main-header">
     <div class="main-header__logo">
-        <svg viewBox="0 0 198 38">
-            <use xlink:href="#cb-logo"></use>
-        </svg>
+        <a href="<?php echo bloginfo('url'); ?>">
+            <svg viewBox="0 0 198 38">
+                <use xlink:href="#cb-logo"></use>
+            </svg>
+        </a>
     </div>
 
-    <a href="#0" class="main-header__hamburger" role="button">
+    <a href="#" class="main-header__hamburger" role="button">
         <svg viewBox="0 0 23 14" width="23">
             <use xlink:href="#hamburger-icon"></use>
         </svg>
@@ -88,6 +90,14 @@
                     <a class="main-nav__link" href="<?php echo $nav->url ?>"><?php echo $nav->title ?></a>
                 </li>
             <?php endforeach; ?>
+            <li>
+                <a href="#" class="btn">
+                    <span>Work With Us</span>
+                    <svg class="arrow arrow-right" viewBox="0 0 32 14">
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+                </a>
+            </li>
         </ul>
     </div>
 </header>

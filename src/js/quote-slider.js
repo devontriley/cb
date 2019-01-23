@@ -1,7 +1,7 @@
 import './../../node_modules/slick-carousel/slick/slick.js';
 
-$(document).ready(function() {
-
+$(document).ready(function()
+{
     const slider = document.querySelector('.quote-slider__slider');
 
     if(slider)

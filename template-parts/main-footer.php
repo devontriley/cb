@@ -11,9 +11,9 @@
                     Unique.
                 </p>
                 <a href="#" class="btn">
-                    Our Work.
-                    <svg class="arrow arrow-left" viewBox="0 0 33 21" width="33px" height="21px">
-                        <use xlink:href="#left-arrow"></use>
+                    <span>Our Work.</span>
+                    <svg class="arrow arrow-right" viewBox="0 0 32 14">
+                        <use xlink:href="#arrow-right"></use>
                     </svg>
                 </a>
             </div>
@@ -44,16 +44,18 @@
                     </p>
                 </div>
                 <a href="work-with-us" class="btn">
-                    Work With Us
-                    <svg class="arrow arrow-left" viewBox="0 0 33 21" width="33px" height="21px">
-                        <use xlink:href="#left-arrow"></use>
+                    <span>Work With Us</span>
+                    <svg class="arrow arrow-right" viewBox="0 0 32 14">
+                        <use xlink:href="#arrow-right"></use>
                     </svg>
                 </a>
             </div>
             <div class="main-footer__logo">
-                <svg viewBox="0 0 198 38">
-                    <use xlink:href="#cb-logo"></use>
-                </svg>
+                <a href="<?php echo bloginfo('url'); ?>">
+                    <svg viewBox="0 0 198 38">
+                        <use xlink:href="#cb-logo"></use>
+                    </svg>
+                </a>
             </div>
         </div>
         <div class="main-footer__base">
@@ -88,7 +90,7 @@
                 </ul>
             </div>
             <div class="main-footer__copyright">
-                <p>© 2018 CAMBRIDGE BIOMARKETING GROUP, LLC.</p>
+                <p>© <?php echo date('Y'); ?> CAMBRIDGE BIOMARKETING GROUP, LLC.</p>
             </div>
         </div>
     </div>

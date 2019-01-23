@@ -36,18 +36,26 @@ foreach($work as $w)
     <div class="work-nav__inner">
         <div class="work-nav__prev">
             <a href="<?php echo get_permalink($prev->ID); ?>">
-                ARROW LEFT<br />
-                Previous
+                <svg viewBox="0 0 32 14">
+                    <use xlink:href="#arrow-left"></use>
+                </svg>
+                <span>Previous</span>
             </a>
         </div>
         <div class="work-nav__all">
-            <a href="<?php echo bloginfo('url'); ?>/our-work">BOX HERE</a>
-            View All Work
+            <a href="<?php echo bloginfo('url'); ?>/our-work">
+                <svg viewBox="0 0 31 31">
+                    <use xlink:href="#case-studies-grid"></use>
+                </svg>
+                <span>View All Work</span>
+            </a>
         </div>
         <div class="work-nav__next">
             <a href="<?php echo get_permalink($next->ID); ?>">
-                ARROW RIGHT<br />
-                Next
+                <svg viewBox="0 0 32 14">
+                    <use xlink:href="#arrow-right"></use>
+                </svg>
+                <span>Next</span>
             </a>
         </div>
     </div>

@@ -57,12 +57,13 @@
 
 .main-header__main-nav li {
     @mixin fontOpenSans;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     display: inline-block;
     margin-right: 3rem;
+    vertical-align: middle;
 }
 
 .main-header__main-nav a {
@@ -74,6 +75,6 @@
     color: var(--color-blue);
 }
 
-.main-header__main-nav li.button a {
-    background: red;
+.main-header--scroll-up .main-header__main-nav .btn {
+    @mixin button var(--color-blue), var(--color-red), var(--color-red);
 }

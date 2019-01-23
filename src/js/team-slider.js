@@ -11,20 +11,24 @@ const teamSliderNav = document.querySelector('.team-profiles__slider-nav');
 let teamSliderHandle = document.querySelector('.team-profiles__slider-handle');
 let teamSliderHandleW = 0;
 
-$(teamSlider).on('init', function(event, slick){
+$(teamSlider).on('init', function(event, slick)
+{
     // TODO: Probably can do this better than using settimeout
     // setTimeout helps wait for correct teamSliderNav width
-    setTimeout(function(){
+    setTimeout(function()
+    {
         teamSliderHandleW = (teamSliderNav.offsetWidth / slick.slideCount);
         $(teamSliderHandle).width(teamSliderHandleW + 'px');
     }, 0);
 });
 
-$(teamSlider).on('beforeChange', function(event, slick, currentSlide, nextSlide){
+$(teamSlider).on('beforeChange', function(event, slick, currentSlide, nextSlide)
+{
     $(teamSliderHandle).css('left', (teamSliderHandleW * nextSlide + 1) + 'px');
 });
 
-$(teamSlider).slick({
+$(teamSlider).slick(
+{
     'infinite': false,
     'variableWidth': true,
     'arrows': false

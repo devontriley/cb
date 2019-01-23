@@ -1,5 +1,3 @@
-/* TODO: This module is using vw calculations at 768 for fully responsiveness. This may want to be tweaked */
-
 .image-callouts {
     @media screen and (min-width: 768px) {
         margin: calc(3.4rem + 66 * ((100vw - 768px) / 1152)) 0;
@@ -77,6 +75,7 @@
 .image-callouts[data-callouts="1"] .image-callouts__callout1 p {
     font-weight: 400;
     @mixin fontOpenSans;
+    line-height: 1.5em;
 
     @media screen and (min-width: 768px) {
         font-size: calc(1.4rem + 6 * ((100vw - 768px) / 1152));
