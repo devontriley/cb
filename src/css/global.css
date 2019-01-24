@@ -90,6 +90,10 @@ h3 {
     }
 }
 
+p {
+    @mixin basicP;
+}
+
 .btn {
     @mixin button;
 }

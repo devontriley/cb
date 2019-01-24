@@ -16,12 +16,22 @@ if($imageID) $image = wp_get_attachment_image_src($imageID, 'full');
         </div>
         <div class="locations__locations-container">
             <div class="locations__location">
-                <?php echo $location1 ?>
-                <a href="<?php echo $location1Map ?>">Maps</a>
+                <?php echo $location1 ?><br />
+                <a href="<?php echo $location1Map ?>" class="btn">
+                    <span>Maps</span>
+                    <svg class="arrow arrow-right" viewBox="0 0 32 14">
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+                </a>
             </div>
             <div class="locations__location">
-                <?php echo $location2 ?>
-                <a href="<?php echo $location2Map ?>">Maps</a>
+                <?php echo $location2 ?><br />
+                <a href="<?php echo $location2Map ?>" class="btn">
+                    <span>Maps</span>
+                    <svg class="arrow arrow-right" viewBox="0 0 32 14">
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+                </a>
             </div>
         </div>
     </div>

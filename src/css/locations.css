@@ -1,5 +1,14 @@
 .locations {
     position: relative;
+    margin: 6.5rem 0;
+
+    @media screen and (min-width: 768px) {
+        margin: calc(6.5rem + 41 * ((100vw - 768px) / 1152)) 0;
+    }
+
+    @media screen and (min-width: 1920px) {
+        margin: 10.6rem 0;
+    }
 }
 
 .locations__inner {

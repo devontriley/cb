@@ -73,9 +73,9 @@ $teamMembers = new WP_Query([
                             </p>
                         </div>
                         <a href="#" class="team-profiles__modal-next btn">
-                            Next
-                            <svg class="arrow arrow-left" viewBox="0 0 33 21" width="33px" height="21px">
-                                <use xlink:href="#left-arrow"></use>
+                            <span>Next</span>
+                            <svg class="arrow arrow-right" viewBox="0 0 32 14">
+                                <use xlink:href="#arrow-right"></use>
                             </svg>
                         </a>
                     </div>

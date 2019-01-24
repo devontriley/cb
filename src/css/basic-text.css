@@ -138,6 +138,12 @@
     }
 }
 
+.basic-text__inner[data-columns="2"] .basic-text__columns {
+    @media screen and (min-width: 768px) {
+        margin: 0 -2rem;
+    }
+}
+
 .basic-text__column[data-columns="1"] {
     max-width: 66.7rem;
 }
@@ -145,6 +151,12 @@
 .basic-text__column[data-columns="2"] {
     flex: 0 0 50%;
     margin-bottom: 1.5em;
+    box-sizing: border-box;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 0;
+        padding: 0 2rem;
+    }
 }
 
 .basic-text__column[data-columns="2"]:last-child {

@@ -1,17 +1,27 @@
+<?php
+$header = get_field('next_page_header');
+$copy = get_field('next_page_copy');
+$btnText = get_field('next_page_button_text');
+$url = get_field('next_page_url');
+$imageID = get_field('next_page_image');
+if($imageID){
+    $image = wp_get_attachment_image_src($imageID, 'full');
+    $imageAlt = get_post_meta($imageID, '_wp_attachment_image_alt', true);
+}
+?>
+
 <!-- Not home -->
 <?php if(!is_page(8)) { ?>
 <footer class="main-footer">
     <div class="main-footer__inner">
         <div class="main-footer__image-copy">
             <div class="main-footer__copy">
-                <p class="main-footer__copy-header">WORK</p>
+                <p class="main-footer__copy-header"><?php echo $header ?></p>
                 <p class="main-footer__copy-text">
-                    Indelible.<br>
-                    Market-moving.<br>
-                    Unique.
+                    <?php echo $copy ?>
                 </p>
-                <a href="#" class="btn">
-                    <span>Our Work.</span>
+                <a href="<?php echo $url ?>" class="btn">
+                    <span><?php echo $btnText ?></span>
                     <svg class="arrow arrow-right" viewBox="0 0 32 14">
                         <use xlink:href="#arrow-right"></use>
                     </svg>
@@ -19,9 +29,9 @@
             </div>
             <div class="main-footer__image">
                 <picture>
-                    <source srcset="http://localhost/cb/wp-content/uploads/2019/01/About_Footer.jpg 768w"
-                            src="http://localhost/cb/wp-content/uploads/2019/01/About_Footer_m.jpg" />
-                    <img src="http://localhost/cb/wp-content/uploads/2019/01/About_Footer_m.jpg" alt="" />
+                    <source srcset="<?php echo $image[0] ?> 768w"
+                            src="" />
+                    <img src="" alt="" />
                 </picture>
             </div>
         </div>
@@ -61,27 +71,27 @@
         <div class="main-footer__base">
             <div class="main-footer__links">
                 <ul class="main-footer__footer-links">
-                    <li><a href="privacy-policy">Privacy Policy</a></li>
-                    <li><a href="legal">Legal</a></li>
-                    <li><a href="careers">Careers</a></li>
+                    <li><a href="<?php echo bloginfo('url'); ?>/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="<?php echo bloginfo('url'); ?>/legal">Legal</a></li>
+                    <li><a href="<?php echo bloginfo('url'); ?>/careers">Careers</a></li>
                 </ul>
                 <ul class="main-footer__sm">
                     <li>
-                        <a href="#">
+                        <a href="https://www.facebook.com/cambridgebiomarketing/" target="_blank">
                             <svg viewBox="0 0 24 24" width="24">
                                 <use xlink:href="#facebook-icon"></use>
                             </svg>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="https://twitter.com/cambridgebmg" target="_blank">
                             <svg viewBox="0 0 24 24" width="24">
                                 <use xlink:href="#twitter-icon"></use>
                             </svg>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="https://www.instagram.com/cambridgebiomarketing/" target="_blank">
                             <svg viewBox="0 0 24 24" width="24">
                                 <use xlink:href="#instagram-icon"></use>
                             </svg>

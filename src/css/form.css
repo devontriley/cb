@@ -10,7 +10,7 @@
 .module-form__inner:before {
     content: '';
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     left: 0;
     top: 0;
     width: 100%;
@@ -33,10 +33,11 @@
     margin-left: 6.94vw;
     padding: 5.55vw 7.638vw;
     box-sizing: border-box;
+    position: relative;
 
     @media screen and (min-width: 768px) {
-        width: 45vw;
-        margin-left: 11vw;
+        width: 45%;
+        margin-left: 11%;
     }
 }
 
@@ -87,6 +88,23 @@
         right: 0;
         top: 49vw;
         transform: translateY(-50%);
-        width: 44vw;
+        width: 44%;
+        margin: 0;
+    }
+
+    h2 {
+        margin-bottom: .5em;
+    }
+
+    p {
+        @mixin basicP;
+    }
+
+    .btn {
+        @mixin button #fff, var(--color-blue), var(--color-red), var(--color-blue);
+    }
+
+    *:last-child {
+        margin-bottom: 0;
     }
 }

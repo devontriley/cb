@@ -73,20 +73,12 @@
 }
 
 .image-callouts[data-callouts="1"] .image-callouts__callout1 p {
-    font-weight: 400;
     @mixin fontOpenSans;
-    line-height: 1.5em;
-
-    @media screen and (min-width: 768px) {
-        font-size: calc(1.4rem + 6 * ((100vw - 768px) / 1152));
-    }
-
-    @media screen and (min-width: 1920px) {
-        font-size: 2.4rem;
-    }
+    @mixin basicP;
 }
 
 .image-callouts__callout1 p {
+    @mixin fontBariol;
     font-size: 1.4rem;
     font-weight: 700;
     line-height: 1.3em;
@@ -133,6 +125,7 @@
 }
 
 .image-callouts__callout2 p {
+    @mixin fontBariol;
     font-size: 1.8rem;
     font-weight: 700;
     line-height: 1.3em;

@@ -84,7 +84,11 @@
 }
 
 .tab-system__panels {
+  margin-right: -2.5rem;
 
+  @media screen and (min-width: 768px) {
+    margin-right: 0;
+  }
 }
 
 .tab-system__panel {

@@ -18,7 +18,7 @@
 .work-nav__inner a {
     text-decoration: none;
     color: var(--color-blue);
-    display: block;
+    display: inline-block;
 
     span {
         white-space: nowrap;
@@ -27,6 +27,7 @@
         font-size: 1.2rem;
         letter-spacing: 2px;
         text-transform: uppercase;
+        display: block;
     }
 
      svg {
@@ -51,6 +52,7 @@
         height: 1.4rem;
         margin-bottom: 3rem;
         margin-top: .8rem;
+        display: inline-block;
     }
 }
 
@@ -67,6 +69,7 @@
         height: 1.4rem;
         margin-bottom: 3rem;
         margin-top: .8rem;
+        display: inline-block;
     }
 }
 
@@ -85,6 +88,7 @@
     svg {
         width: 3.1rem;
         height: 3.1rem;
-        margin-bottom: 3rem;
+        display: inline-block;
+        margin: 0 auto 3rem auto;
     }
 }

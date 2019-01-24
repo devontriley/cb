@@ -1,6 +1,7 @@
 .full-width-image {
     padding: 0 2.5rem;
     margin: 6.5rem 0;
+    position: relative;
 
     @media screen and (min-width: 768px) {
         padding: 0;
@@ -12,6 +13,15 @@
 
     @media screen and (min-width: 1920px) {
         margin: 21.12rem 0;
+    }
+
+    &.svg {
+        .full-width-image__inner {
+            @media screen and (min-width: 768px) {
+                width: 70%;
+                margin: 0 auto;
+            }
+        }
     }
 }
 

@@ -3,12 +3,12 @@
 }
 
 .mobile-displays__inner {
-
 }
 
 .mobile-displays__header {
     padding: 0 7rem;
-    margin-bottom: 3rem;
+    max-width: 99rem;
+    margin: 0 auto 3rem auto;
 }
 
 .mobile-displays__images {

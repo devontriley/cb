@@ -65,6 +65,7 @@ $video = get_sub_field('video');
                 <?php } ?>
                 </ul>
                 <p>Don't see the opening you're looking for? <a href="contact-us">Contact us!</a></p>
+                <span class="module-hero__large-page-title"><?php echo $large_page_title ?></span>
             </div>
         <?php } ?>
 
